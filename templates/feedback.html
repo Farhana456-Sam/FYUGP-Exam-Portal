@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="/static/css/feedback.css">
+</head>
+
+<body background="/static/images/background12.jpg">
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form action="/feedback" method="post">
+            <label for="mcq-rating">Rate your MCQ Test:</label>
+            <div class="rating">
+                <input type="radio" name="mcq-rating" value="1"> 1
+                <input type="radio" name="mcq-rating" value="2"> 2
+                <input type="radio" name="mcq-rating" value="3"> 3
+                <input type="radio" name="mcq-rating" value="4"> 4
+                <input type="radio" name="mcq-rating" value="5"> 5
+            </div>
+
+            <label for="subjective-rating">Rate your Subjective Test:</label>
+            <div class="rating">
+                <input type="radio" name="subjective-rating" value="1"> 1
+                <input type="radio" name="subjective-rating" value="2"> 2
+                <input type="radio" name="subjective-rating" value="3"> 3
+                <input type="radio" name="subjective-rating" value="4"> 4
+                <input type="radio" name="subjective-rating" value="5"> 5
+            </div>
+
+            <label for="coding-rating">Rate your Coding Examination:</label>
+            <div class="rating">
+                <input type="radio" name="coding-rating" value="1"> 1
+                <input type="radio" name="coding-rating" value="2"> 2
+                <input type="radio" name="coding-rating" value="3"> 3
+                <input type="radio" name="coding-rating" value="4"> 4
+                <input type="radio" name="coding-rating" value="5"> 5
+            </div>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea name="comments" placeholder="Write your feedback here..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

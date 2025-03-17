@@ -1,0 +1,11 @@
+Question_ID,Question,Keyword 1,Keyword 2,Keyword 3,Keyword 4
+1,What is the importance of data preprocessing in machine learning?,Preprocessing,Cleaning,Normalization,Transformation
+2,Explain the difference between classification and regression with examples.,Classification,Regression,Discrete,Continuous
+3,"How does principal component analysis (PCA) work, and when should it be used?",PCA,Dimensionality,Variance,Eigenvalues
+4,What are the different types of activation functions in neural networks?,Activation,ReLU,Sigmoid,Tanh
+5,Describe the bias-variance tradeoff in machine learning.,Bias,Variance,Overfitting,Underfitting
+6,"What are hyperparameters in machine learning, and how do they differ from model parameters?",Hyperparameters,Parameters,Learning rate,Epochs
+7,Explain the concept of natural language processing (NLP) and its real-world applications.,NLP,Text,Tokenization,Sentiment
+8,"What is ensemble learning, and what are the common types of ensemble methods?",Ensemble,Bagging,Boosting,Random Forest
+9,"How does a convolutional neural network (CNN) work, and what are its main components?",CNN,Convolution,Filters,Pooling
+10,Explain the significance of A/B testing in data science and how it is performed.,A/B Testing,Experimentation,Hypothesis,Statistical significance

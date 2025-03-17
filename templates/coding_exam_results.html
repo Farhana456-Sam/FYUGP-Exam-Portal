@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Exam Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/coding_exam.css') }}">
+</head>
+<body>
+    <h2>Exam Results</h2>
+
+    <!-- Student Information -->
+    <h3>Student Details</h3>
+    <p><strong>Login ID:</strong> {{ login_id }}</p>
+    <p><strong>Student Name:</strong> {{ student_name }}</p>
+    <p><strong>Department:</strong> {{ department }}</p>
+
+    <!-- Displaying Only One Entry -->
+    <h3>Exam Performance</h3>
+
+    <h3>Total Marks: {{ total_marks }}</h3>
+    <h3>Grade: {{ grade }}</h3>
+    <h3>Percentage: {{ percentage }}%</h3>
+
+    <!-- Back to Dashboard -->
+    <a href="{{ url_for('dashboard.dashboard', login_id=session.get('user', ''), student_name=session.get('student_name', ''), department=session.get('department', ''), total_marks=session.get('total_marks', 0)) }}">
+        <button>Back to Dashboard</button>
+    </a>
+</body>
+</html>

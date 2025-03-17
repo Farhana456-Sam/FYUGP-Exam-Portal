@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <body background="/static/images/background.jpg">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Student Login</h2>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>  <!-- This will display invalid login messages -->
+    {% endif %}
+        <form id="loginForm" action="/login" method="post">
+            <label for="loginid">Login ID</label>
+            <input type="text" id="loginId" name="loginId" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Submit</button>
+            <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+        </form>
+    </div>
+
+</body>
+</html>

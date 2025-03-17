@@ -1,0 +1,17 @@
+QuestionID,Question,OptionA,OptionB,OptionC,OptionD,Correct Answer,Difficulty,Category
+1,What is the correct extension for Python files?,.py,.python,.pyt,.pt,A,Easy,Syntax
+2,Which keyword is used to define a function?,func,def,function,define,B,Easy,Functions
+3,How do you start a comment in Python?,//,#,/*,--,B,Easy,Syntax
+4,Which of these is an immutable data type?,List,Dictionary,Tuple,Set,C,Medium,Data Types
+5,What will print(3 * 'Python') output?,PythonPythonPython,Python*3,Error,3Python,A,Easy,Strings
+6,Which operator is used for exponentiation?,^,**,//,%%,B,Medium,Operators
+7,How do you read input from the user?,input(),read(),scan(),get(),A,Easy,I/O
+8,What does len() return?,Number of characters in a string,Memory size,Total variables,Only works for lists,A,Easy,Functions
+9,How do you open a file in write mode?,"open(""file.txt"", ""r"")","open(""file.txt"", ""w"")","open(""file.txt"", ""a"")","open(""file.txt"")",B,Easy,File Handling
+10,What is the default value returned by a function that has no return statement?,Error,None of them,Undefined,Empty String,B,Medium,Functions
+11,How do you check the data type of a variable?,type(),check(),typeof(),varType(),A,Easy,Data Types
+12,What is the output of bool([])?,TRUE,FALSE,None of the above,Error,B,Medium,Booleans
+13,Which module is used to generate random numbers?,random,math,rand,numpy,A,Easy,Modules
+14,Which of these is not a valid variable name?,_var,2var,var_name,varName,B,Easy,Variables
+15,What is the output of print(10 // 3)?,3,3.33,4,Error,A,Medium,Operators
+16,How do you import the math module?,import math,include math,using math,require math,A,Easy,Modules

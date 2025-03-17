@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <body background="/static/images/background2.jpg">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="profile.png" alt="Profile Picture">
+            <h3>{{ student_name }}</h3>
+            <p>{{ department }}</p>
+        </div>
+        <ul>
+            <li class="active">Dashboard</li>
+            <li>Notifications</li>
+            <li class="mcq-active"><a href="{{ url_for('mcq.mcq') }}">MCQ Test</a></li>
+            <li class="subjective-active"><a href="{{ url_for('subjective.attend_exam') }}">Subjective Exam</a></li>
+            <li class="coding_exam-active"><a href="{{ url_for('coding_exam.coding_exam') }}">Coding Assignments</li>
+            <li class="feedback-active"><a href="{{ url_for('feedback.feedback') }}">Feedback</a></li>
+        </ul>
+    <div class="dashboard-container">
+        <h1>Welcome, {{ student_name }}</h1>
+
+        <div class="chart-container">
+            <h3>Your Score Distribution</h3>
+            <img src="{{ url_for('static', filename=login_id ~ '_pie_chart.png') }}" alt="Student Score Pie Chart">
+        </div>
+
+        <a class="logout-btn" href="{{ url_for('home') }}">Logout</a>
+    </div>
+</body>
+</html>

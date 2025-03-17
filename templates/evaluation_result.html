@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Result</title>
+    <link rel="stylesheet" href="/static/css/styles2.css">
+</head>
+<body background="/static/images/background3.jpg">
+    <div class="container">
+        <h2>Evaluation Result</h2>
+
+        <p><strong>Student ID:</strong> {{ session.get('user', 'Unknown') }}</p>
+        <p><strong>Total Marks:</strong> {{ total_marks }}</p>
+        <p><strong>Grade:</strong> {{ grade if grade else 'N/A' }}</p>
+        
+        {% if results %}
+            <p><strong>Percentage:</strong> {{ (total_marks / (10 * results|length)) * 100 | round(2) }}%</p>
+        {% else %}
+            <p><strong>Percentage:</strong> 0%</p>
+        {% endif %}
+
+        <table border="1">
+            <tr>
+                <th>Question No.</th>
+                <th>Assigned Marks</th>
+                <th>Similarity Score</th>
+            </tr>
+            {% for result in results %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td>{{ result[1] }}</td>
+                    <td>{{ "%.2f"|format(result[2]|float * 100) }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <br>
+        <a href="{{ url_for('subjective.download_result') }}">
+            <button class="small-btn">Download Result</button>
+        </a>
+
+        <br><br>
+        <a href="{{ url_for('dashboard.dashboard', login_id=session.get('user', ''), student_name=session.get('student_name', ''), department=session.get('department', ''), total_marks=session.get('total_marks', 0)) }}">
+            <button>Back to Dashboard</button>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add MCQ Question</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add MCQ Question</h2>
+
+        <!-- Flash messages for success/error notifications -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('faculty_bp.add_mcq') }}" method="POST">
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question" required>
+
+            <label for="optionA">Option A:</label>
+            <input type="text" id="optionA" name="optionA" required>
+
+            <label for="optionB">Option B:</label>
+            <input type="text" id="optionB" name="optionB" required>
+
+            <label for="optionC">Option C:</label>
+            <input type="text" id="optionC" name="optionC" required>
+
+            <label for="optionD">Option D:</label>
+            <input type="text" id="optionD" name="optionD" required>
+
+            <label for="correct_answer">Correct Answer:</label>
+            <select id="correct_answer" name="correct_answer" required>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+
+            <button type="submit">Save MCQ</button>
+        </form>
+
+        <a href="{{ url_for('faculty_bp.faculty_dashboard') }}"><button class="back-btn">Back to Dashboard</button></a>
+    </div>
+</body>
+</html>

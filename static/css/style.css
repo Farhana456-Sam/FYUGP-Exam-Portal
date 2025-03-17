@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.login-container, .dashboard-container, .form-container {
+    width: 40%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #444;
+    margin-top: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Button Group */
+.button-group {
+    margin-top: 20px;
+}
+
+/* Buttons */
+.action-btn, .logout-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+    width: 80%;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #dc3545;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .dashboard-container {
+        width: 90%;
+    }
+}
+
+}
+
+h2 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.logout-btn {
+    background: red;
+}
+
+.logout-btn:hover {
+    background: darkred;
+}
+
+.back-btn {
+    background: #555;
+}
+
+.back-btn:hover {
+    background: #333;
+}

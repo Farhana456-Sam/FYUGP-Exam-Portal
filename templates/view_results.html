@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View {{ exam_type.capitalize() }} Results</title>
+    <link rel="stylesheet" href="/static/css/view_result.css">
+</head>
+<body>
+    <div class="results-container">
+        <h2>{{ exam_type.capitalize() }} Results</h2>
+        
+        {% if results %}
+            <table>
+                <thead>
+                    <tr>
+                        {% for key in results[0].keys() %}
+                            <th>{{ key.replace('_', ' ').title() }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in results %}
+                        <tr>
+                            {% for value in row.values() %}
+                                <td>{{ value }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No results available for this exam type.</p>
+        {% endif %}
+
+        <a href="{{ url_for('faculty_bp.faculty_dashboard') }}"><button class="back-btn">Back to Dashboard</button></a>
+    </div>
+</body>
+</html>

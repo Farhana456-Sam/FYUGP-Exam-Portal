@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Exam</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/coding_exam.css') }}">
+    <body background="/static/images/background12.jpg">
+</head>
+<body>
+    <h2>Coding Examination</h2>
+
+    <!-- Display the current question -->
+    <p><strong>{{ question }}</strong></p>
+
+    <form action="{{ url_for('coding_exam.coding_exam') }}" method="POST">
+        <label for="code">Enter your Python code:</label><br>
+        <textarea name="code" id="code" required></textarea><br>
+
+        <!-- Button logic for 'Next' and 'Submit' -->
+        {% if is_last_question %}
+            <button type="submit" name="submit">Submit</button>
+        {% else %}
+            <button type="submit" name="next">Next</button>
+        {% endif %}
+    </form>
+
+</body>
+</html>

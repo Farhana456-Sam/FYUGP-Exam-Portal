@@ -1,0 +1,11 @@
+Instruction,Input,Output
+Write a Python program to add two numbers 4 and 5.,print(4 + 5),9
+Write a function to check if a number is even or odd.,print('Even' if 7 % 2 == 0 else 'Odd'),Odd
+Write a program to find the factorial of a number 5.,import math; print(math.factorial(5)),120
+"Write a function to reverse a string ""hello"".",print('hello'[::-1]),olleh
+Write a program to check if a number is prime.,"num = 11; print('Prime' if all(num % i != 0 for i in range(2, num)) else 'Not Prime')",Prime
+"Write a Python program to find the largest number in a list [3, 7, 2, 9].","print(max([3, 7, 2, 9]))",9
+"Write a function to count vowels in a given string ""education"".",print(sum(1 for ch in 'education' if ch in 'aeiou')),5
+Write a Python program to check if a string is a palindrome.,s = 'madam'; print(s == s[::-1]),TRUE
+Write a function to find the sum of digits of a number (123).,print(sum(int(d) for d in str(123))),6
+Write a program to generate the Fibonacci sequence up to N terms of number 5.,"n = 5; fib = [0, 1]; [fib.append(fib[-1] + fib[-2]) for _ in range(n-2)]; print(fib)","[0, 1, 1, 2, 3]"

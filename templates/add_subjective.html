@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Subjective Question</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Subjective Question</h2>
+
+        <!-- Flash messages for success/error notifications -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('faculty_bp.add_subjective') }}" method="POST">
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question" required>
+
+            <label for="keyword1">Keyword 1:</label>
+            <input type="text" id="keyword1" name="keyword1" required>
+
+            <label for="keyword2">Keyword 2:</label>
+            <input type="text" id="keyword2" name="keyword2" required>
+
+            <label for="keyword3">Keyword 3:</label>
+            <input type="text" id="keyword3" name="keyword3" required>
+
+            <label for="keyword4">Keyword 4:</label>
+            <input type="text" id="keyword4" name="keyword4" required>
+
+            <button type="submit">Save Question</button>
+        </form>
+        
+        <a href="{{ url_for('faculty_bp.faculty_dashboard') }}"><button class="back-btn">Back to Dashboard</button></a>
+    </div>
+</body>
+</html>

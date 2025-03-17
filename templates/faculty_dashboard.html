@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, {{ name }}!</h2>
+        
+        <div class="button-group">
+            <a href="{{ url_for('faculty_bp.add_mcq') }}"><button class="action-btn">Add MCQ Questions</button></a>
+            <a href="{{ url_for('faculty_bp.add_subjective') }}"><button class="action-btn">Add Subjective Questions</button></a>
+            <a href="{{ url_for('faculty_bp.view_results', exam_type='mcq') }}"><button class="action-btn">View MCQ Results</button></a>
+            <a href="{{ url_for('faculty_bp.view_results', exam_type='subjective') }}"><button class="action-btn">View Subjective Results</button></a>
+            <a href="{{ url_for('faculty_bp.view_results', exam_type='coding') }}"><button class="action-btn">View Coding Exam Results</button></a>
+            <a href="{{ url_for('faculty_bp.view_results', exam_type='feedback') }}"><button class="action-btn">View Feedbacks</button></a>
+        </div>
+
+        <a href="{{ url_for('faculty_bp.logout') }}"><button class="logout-btn">Logout</button></a>
+    </div>
+</body>
+</html>

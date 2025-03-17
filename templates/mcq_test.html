@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Test</title>
+    <link rel="stylesheet" href="/static/css/mcq.css">
+</head>
+<body>
+
+    <div class="exam-container">
+        <div class="exam-box">
+            <h2>MCQ Test</h2>
+
+            {% if session.get("exam_completed", False) %}
+                <p class="error-text">You have already completed the exam.</p>
+                
+                <a href="{{ url_for('mcq.download_result') }}">
+                    <button class="btn download-btn">Download Result</button>
+                </a>
+
+            {% else %}
+                <form action="{{ url_for('mcq.next_mcq') }}" method="post">
+                    <p class="question-title"><strong>Question {{ question_index + 1 }} of {{ total }}</strong></p>
+                    <p class="question-text">{{ question['Question'] }}</p>
+
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="A" required> {{ question['OptionA'] }}</label>
+                        <label><input type="radio" name="answer" value="B"> {{ question['OptionB'] }}</label>
+                        <label><input type="radio" name="answer" value="C"> {{ question['OptionC'] }}</label>
+                        <label><input type="radio" name="answer" value="D"> {{ question['OptionD'] }}</label>
+                    </div>
+
+                    <div class="button-group">
+                        {% if question_index + 1 == total %}
+                            <button type="submit" class="btn submit-btn">Submit</button>
+                        {% else %}
+                            <button type="submit" class="btn next-btn">Next</button>
+                        {% endif %}
+                    </div>
+                </form>
+            {% endif %}
+
+            <a href="{{ url_for('dashboard.dashboard', login_id=session.get('user', ''), student_name=session.get('student_name', ''), department=session.get('department', ''), total_marks=session.get('total_marks', 0)) }}">
+                <button class="btn back-btn">Back to Dashboard</button>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>

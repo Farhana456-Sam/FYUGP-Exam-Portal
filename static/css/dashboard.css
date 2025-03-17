@@ -1,0 +1,177 @@
+/* ========================== */
+/* RESET & GLOBAL STYLES */
+/* ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Apply the futuristic background */
+body {
+    background: url("../images/background2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #d0d6e2; /* Light grayish-blue for text */
+}
+
+/* ========================== */
+/* SIDEBAR STYLES */
+/* ========================== */
+
+.sidebar {
+    width: 250px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    height: 100vh;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.profile h3, .profile p {
+    margin: 5px 0;
+    color: white;
+}
+
+/* Sidebar Navigation */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover,
+.sidebar ul li.mcq-active {  /* Added mcq-active class */
+    background: rgba(255, 255, 255, 0.2);
+    color: white !important;  /* Ensures text is white */
+    text-decoration: none;  /* Removes underline */
+}
+
+.sidebar ul li.mcq-active a {
+    color: white !important;  /* Ensures link text is white */
+    text-decoration: none;  /* Removes underline */
+}
+
+.sidebar ul li a:hover {
+    color: white !important;  /* Ensures hover text remains white */
+    text-decoration: none;  /* Removes underline */
+}
+
+/* ========================== */
+/* SIDEBAR STYLES */
+/* ========================== */
+
+.sidebar ul li.subjective-active { 
+    background: rgba(255, 255, 255, 0.2); 
+    color: white !important; 
+    text-decoration: none; 
+}
+
+
+
+.sidebar ul li.subjective-active a { 
+    color: white !important; 
+    text-decoration: none; 
+}
+
+.sidebar ul li.feedback-active a { 
+    color: white !important; 
+    text-decoration: none; 
+}
+.sidebar ul li.feedback-active { 
+    background: rgba(255, 255, 255, 0.2); 
+    color: white !important; 
+    text-decoration: none; 
+}
+
+.sidebar ul li.coding_exam-active a { 
+    color: white !important; 
+    text-decoration: none; 
+}
+.sidebar ul li.coding_exam-active { 
+    background: rgba(255, 255, 255, 0.2); 
+    color: white !important; 
+    text-decoration: none; 
+}
+/* DASHBOARD CONTAINER */
+
+.dashboard-container {
+    width: 50%;
+    max-width: 600px; /* Adjust width for better responsiveness */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background: rgba(20, 30, 50, 0.8); /* Dark blue with slight transparency */
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+/* ========================== */
+/* TEXT & HEADINGS */
+
+h1 {
+    color: #ffffff; /* Bright white for contrast */
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    color: #a0c4ff; /* Light blue accent */
+    margin-bottom: 8px;
+}
+
+/* ========================== */
+/* IMAGE STYLES */
+/* ========================== */
+
+img {
+    width: 70%;
+    max-width: 400px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================== */
+/* BUTTON STYLES */
+/* ========================== */
+
+.logout-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #0f172a, #334155);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #a0c4ff;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(45deg, #334155, #475569);
+    transform: scale(1.05);
+}

@@ -1,0 +1,79 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url("../images/background12.jpg") no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Exam Heading */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+/* Question Styling */
+p {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Code Input Box */
+textarea {
+    width: 80%;
+    height: 200px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    resize: none;
+}
+
+/* Buttons */
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[name="next"] {
+    background-color: #3498db;
+    color: white;
+}
+
+button[name="next"]:hover {
+    background-color: #2980b9;
+}
+
+button[name="submit"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button[name="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    textarea {
+        width: 95%;
+    }
+
+    button {
+        width: 90%;
+    }
+}
